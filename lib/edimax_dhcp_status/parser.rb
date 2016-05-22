@@ -8,7 +8,7 @@ module EdimaxDhcpStatus
   class Parser
     include Capybara::DSL
 
-    attr_accessor :url
+    attr_reader :url
 
     def initialize(addr, login, password)
       Capybara.register_driver(:poltergeist) { |app| Capybara::Poltergeist::Driver.new(app, js_errors: false) }
